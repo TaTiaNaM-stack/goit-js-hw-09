@@ -31,9 +31,13 @@ if (savedFormData) {
     formData.message = parsedFormData.message || '';
     inputEl.value = formData.email;
     textareaEl.value = formData.message;
+    
 };
 
- function showAlert() {
-    alert('Fill please all fields');
-  }
+if (formData.email === '' || formData.message === ''){
+alert('Fill please all fields');
+} 
+
+   
+
   
