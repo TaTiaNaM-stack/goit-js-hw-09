@@ -1,4 +1,4 @@
-console.log('Form');
+
 
 const formData = {
     email: '',
@@ -33,4 +33,7 @@ if (savedFormData) {
     textareaEl.value = formData.message;
 };
 
+ function showAlert() {
+    alert('Fill please all fields');
+  }
   

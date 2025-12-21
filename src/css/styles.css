@@ -57,3 +57,34 @@ body{
     align-items: flex-start;
     padding-top: 30px;
 }
+
+.label{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #333;
+    width: 100%;
+}
+
+.email-label{
+    gap: 35px;
+}
+
+.form-el{
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    outline: transparent;
+}
+
+.input{
+
+}
+
