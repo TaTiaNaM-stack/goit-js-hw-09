@@ -18,6 +18,11 @@ function onFormSubmit(event) {
     console.log(formData);
     event.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
+    if (formData.email === '' || formData.message === '') {
+        alert('Fill please all fields');
+        return false;
+    }
+    return true;
 };
 
 inputEl.addEventListener('input', onInputChange);
@@ -34,10 +39,6 @@ if (savedFormData) {
     
 };
 
-if (formData.email === '' || formData.message === ''){
-alert('Fill please all fields');
-} 
 
-   
 
   
