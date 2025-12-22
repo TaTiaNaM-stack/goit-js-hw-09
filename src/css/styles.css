@@ -78,8 +78,7 @@ body{
 .form-el{
     flex-grow: 1;
     width: 360px;
-    padding: 8px;
-   
+    padding: 8px;   
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
