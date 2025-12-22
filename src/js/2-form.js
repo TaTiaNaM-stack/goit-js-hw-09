@@ -25,7 +25,9 @@ function onFormSubmit(event) {
     console.log(formData);
     event.currentTarget.reset();
     localStorage.removeItem('feedback-form-state'); 
-    return true; 
+    formData.email = '';
+    formData.message = '';
+     
 };
 
 formEl.addEventListener('input', onInputChange);
