@@ -10,23 +10,25 @@ const textareaEl = document.querySelector('textarea[name="message"]');
 const formEl = document.querySelector('.feedback-form');
 
 function onInputChange(event) {
-    formData[event.target.name] = event.target.value;
+    
+    formData[event.target.name] = event.target.value.trim();
     localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 };
+
 function onFormSubmit(event) {
     event.preventDefault();
-    console.log(formData);
-    event.currentTarget.reset();
-    localStorage.removeItem('feedback-form-state');
-    if (formData.email === '' || formData.message === '') {
+     if (formData.email === '' || formData.message === '') {
         alert('Fill please all fields');
         return false;
     }
-    return true;
+    
+    console.log(formData);
+    event.currentTarget.reset();
+    localStorage.removeItem('feedback-form-state'); 
+    return true; 
 };
 
-inputEl.addEventListener('input', onInputChange);
-textareaEl.addEventListener('input', onInputChange);
+formEl.addEventListener('input', onInputChange);
 formEl.addEventListener('submit', onFormSubmit);
 
 const savedFormData = localStorage.getItem('feedback-form-state');
