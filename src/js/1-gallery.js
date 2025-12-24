@@ -93,7 +93,6 @@ function onGalleryContainerClick (event) {
     return;
   };
   const originalImageURL = event.target.dataset.source;
-  
 };
 
 const lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
