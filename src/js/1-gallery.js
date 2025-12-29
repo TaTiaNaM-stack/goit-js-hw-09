@@ -83,18 +83,8 @@ const markup = images.map (({preview, original, description}) => `<li class="gal
 </li>`).join('');
 galleryContainer.innerHTML = markup;
 
-galleryContainer.addEventListener ('click', onGalleryContainerClick);
 
-function onGalleryContainerClick (event) {
-  event.preventDefault();
-
-  const isGalleryImage = event.target.classList.contains ('gallery-image');
-  if (!isGalleryImage) {
-    return;
-  };
-  const originalImageURL = event.target.dataset.source;
-};
 
 const lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
-lightbox.open(originalImageURL);
+
 
